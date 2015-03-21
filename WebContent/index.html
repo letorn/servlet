@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<script type="text/javascript" src="public/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+  function pagedUsersClick() {
+	  $.getJSON('user/page.do?start=0&limit=3', function(data) {
+		  alert(JSON.stringify(data));
+	  });
+  }
+</script>
+</head>
+<body>
+  <h1>Index</h1>
+  <a href="javascript:pagedUsersClick()">Paged Users</a>
+</body>
+</html>

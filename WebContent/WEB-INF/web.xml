@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1">
+
+  <filter>
+  	<filter-name>ActionFilter</filter-name>
+  	<filter-class>action.ActionFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>ActionFilter</filter-name>
+  	<url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>userServlet</servlet-name>
+    <servlet-class>action.UserServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>userServlet</servlet-name>
+    <url-pattern>/user/*</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
